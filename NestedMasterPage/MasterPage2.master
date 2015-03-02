@@ -1,0 +1,14 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/NestedMasterPage/MasterPage.master" AutoEventWireup="true" CodeFile="MasterPage2.master.cs" Inherits="NestedMasterPage_MasterPage2" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <asp:ContentPlaceHolder ID="head2" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <div style="float: left;">
+        <h3>第二个母版页<br />左侧导航栏</h3>
+    </div>
+    <div style="float: left;">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+    </div>
+</asp:Content>
+
