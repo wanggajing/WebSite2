@@ -18,7 +18,8 @@
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
-        <div>第一个母版页footer</div>
+
+        <div style="clear:both;">第一个母版页footer</div>
     </div>
     </form>
 </body>
