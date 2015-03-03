@@ -1,0 +1,7 @@
+﻿div .assistant {
+    border:dashed 1px silver;
+    width:300px;height:150px;
+    background-color:#ccddff;
+    margin:10px;
+    float:left;
+}
