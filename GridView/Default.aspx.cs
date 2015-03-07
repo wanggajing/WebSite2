@@ -29,4 +29,27 @@ public partial class GridView_Default : System.Web.UI.Page
         GridView1.DataBind();
         table.Dispose();
     }
+    private void bindData(string sortField, bool desc)
+    {
+        string s = System.Configuration.ConfigurationManager.ConnectionStrings["database2"].ConnectionString;
+        SqlConnection connection = new SqlConnection(s);
+        string sql = "select * from Products";
+        if (!string.IsNullOrEmpty(sortField))
+        {
+            sql += " order by " + sortField;
+            if (desc)
+                sql += " desc ";
+        }
+        SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
+        DataTable table = new DataTable();
+        adapter.FillSchema(table, SchemaType.Source);
+        adapter.Fill(table);
+        GridView1.DataSource = table;
+        GridView1.DataBind();
+        table.Dispose();
+    }
+    protected void GridView1_Sorting(object sender, GridViewSortEventArgs e)
+    {
+        bindData(e.SortExpression, e.SortDirection == SortDirection.Descending);
+    }
 }
