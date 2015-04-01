@@ -22,8 +22,8 @@
                 <td></td>
             </tr>
             <tr>
-                <td>接收账号:<asp:TextBox ID="destinationName" runat="server"></asp:TextBox></td>
-                <td>账号名称:<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox></td>
+                <td>接收账号:<asp:TextBox ID="destination" runat="server"></asp:TextBox></td>
+                <td>账号名称:<asp:TextBox ID="destinationName" runat="server"></asp:TextBox></td>
                 <td><asp:Button ID="ok" runat="server" Text="转账" Width="100" OnClick="ok_Click"></asp:Button></td>
             </tr>
         </table>
