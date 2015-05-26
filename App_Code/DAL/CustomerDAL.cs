@@ -6,12 +6,12 @@ using System.Web;
 /// <summary>
 /// Summary description for CustomerDAL
 /// </summary>
-public class CustomerDAL
+public static class CustomerDAL
 {
-    private DBContext context = new DBContext();
-    public Customer GetById(string id)
+    private static DBContext context = new DBContext();
+    public static Customer GetById(string id)
     {
-        var customer = context.Customers.Select(c => c.CustomerID == id);
+        var customer = context.Customers.Where(c => c.CustomerID == id);
         return customer as Customer;
     }
 }
